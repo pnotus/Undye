@@ -1,0 +1,21 @@
+{
+    "environmentSettings": {
+        "webSite": {
+            "name": "undye",
+            "location": "North Europe"
+        },
+        "databases": [
+            {
+                "connectionStringName": "DefaultConnection",
+                "databaseName": "undye_db",
+                "serverName": "y15q0omq4q",
+                "user": "dbuser",
+                "password": "",
+                "edition": "",
+                "size": "",
+                "collation": "",
+                "location": "North Europe"
+            }
+        ]
+    }
+}
