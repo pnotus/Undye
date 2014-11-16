@@ -222,8 +222,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
-    <Content Include="ConnectionStrings.config" />
-    <Content Include="PrivateSettings.config" />
     <None Include="Properties\PublishProfiles\undye.pubxml" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -279,6 +277,8 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Secrets\ConnectionStrings.config" />
+    <Content Include="Secrets\PrivateSettings.config" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

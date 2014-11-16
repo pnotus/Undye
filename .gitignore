@@ -5,8 +5,7 @@
 *.suo
 *.user
 *.sln.docstates
-Undye.Web/ConnectionStrings.config
-Undye.Web/PrivateSettings.config
+Secrets/
 
 # Build results
 
