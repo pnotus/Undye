@@ -1,8 +1,8 @@
-﻿using System.Data.Entity;
+﻿using ElCamino.AspNet.Identity.AzureTable;
+using ElCamino.AspNet.Identity.AzureTable.Model;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace Undye.Web.Models
 {
@@ -18,10 +18,10 @@ namespace Undye.Web.Models
         }
     }
 
-    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
+    public class ApplicationDbContext : IdentityCloudContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base()
         {
         }
 

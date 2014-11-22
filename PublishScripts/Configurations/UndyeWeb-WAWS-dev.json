@@ -4,17 +4,16 @@
             "name": "undye",
             "location": "North Europe"
         },
-        "databases": [
+        "databases": [ 
             {
-                "connectionStringName": "DefaultConnection",
-                "databaseName": "undye_db",
-                "serverName": "y15q0omq4q",
-                "user": "dbuser",
+                "connectionStringName": "",
+                "databaseName": "",
+                "serverName": "",
+                "user": "",
                 "password": "",
                 "edition": "",
                 "size": "",
-                "collation": "",
-                "location": "North Europe"
+                "collation": ""
             }
         ]
     }
