@@ -47,8 +47,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
-    <Reference Include="ElCamino.AspNet.Identity.AzureTable">
-      <HintPath>..\packages\ElCamino.AspNet.Identity.AzureTable.1.5.0.0\lib\net45\ElCamino.AspNet.Identity.AzureTable.dll</HintPath>
+    <Reference Include="ElCamino.AspNet.Identity.AzureTable, Version=1.5.1.0, Culture=neutral, PublicKeyToken=8a83e5a7822753ac, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\ElCamino.AspNet.Identity.AzureTable.1.5.1.0\lib\net45\ElCamino.AspNet.Identity.AzureTable.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ApplicationInsights">
       <HintPath>..\packages\Microsoft.ApplicationInsights.0.11.1-build00694\lib\net40\Microsoft.ApplicationInsights.dll</HintPath>
