@@ -3,6 +3,7 @@ using ElCamino.AspNet.Identity.AzureTable.Model;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
+using System.Configuration;
 
 namespace Undye.Web.Models
 {
@@ -21,7 +22,7 @@ namespace Undye.Web.Models
     public class ApplicationDbContext : IdentityCloudContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base()
+            : base(new IdentityConfiguration { StorageConnectionString = ConfigurationManager.AppSettings["StorageConnectionString"] })
         {
         }
 
