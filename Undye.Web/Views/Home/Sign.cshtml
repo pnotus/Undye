@@ -1,30 +1,22 @@
 ﻿@model Undye.Web.Models.PetitionViewModel
 
-@using (Html.BeginForm("Sign", "Home"))
-{
-    @Html.AntiForgeryToken()
-    
-    <div class="form-horizontal">
-        <h4>PetitionViewModel</h4>
-        <hr />
+<div data-spy="affix" data-offset-top="0" data-offset-bottom="200">
+    @using (Html.BeginForm("Sign", "Home"))
+    {
+        @Html.AntiForgeryToken()
+
+        <h4>Ta ställning</h4>
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="form-group">
-            @Html.LabelFor(model => model.Signed, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                <div class="checkbox">
-                    @Html.EditorFor(model => model.Signed)
-                    @Html.ValidationMessageFor(model => model.Signed, "", new { @class = "text-danger" })
-                </div>
-            </div>
+        <div class="checkbox">
+            <label>
+                @Html.EditorFor(model => model.Signed) Skriv under
+                @Html.ValidationMessageFor(model => model.Signed, "", new { @class = "text-danger" })
+            </label>
         </div>
 
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
-            </div>
-        </div>
-    </div>
-}
+        <input type="submit" value="Save" class="btn btn-default" />
+    }
+</div>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

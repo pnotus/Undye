@@ -61,7 +61,7 @@ namespace Undye.Web.Controllers
         {
             var user = await UserManager.FindByIdAsync(User.Identity.GetUserId());
             var model = new PetitionViewModel() { Signed = user.Signed };
-            return View(model);
+            return PartialView(model);
         }
 
         [HttpPost]
