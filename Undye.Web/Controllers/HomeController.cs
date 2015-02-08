@@ -39,7 +39,8 @@ namespace Undye.Web.Controllers
 
         public ActionResult Index()
         {
-            return View();
+            var model = new HomeViewModel { Petitions = UserManager.Users.Where(u => u.Signed).Count() };
+            return View(model);
         }
 
         public ActionResult About()

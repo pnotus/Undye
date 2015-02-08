@@ -1,4 +1,5 @@
-﻿@{
+﻿@model Undye.Web.Models.HomeViewModel
+@{
     ViewBag.Title = "Home Page";
 }
 
@@ -8,7 +9,7 @@
         <div></div>
         <div class="jumbotron">
             <h1>#Undye</h1>
-            <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+            <p class="lead">Antal underskrifter <span class="badge">@Html.DisplayFor(model => model.Petitions)</span></p>
             <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
         </div>
         <h2>Visste du att</h2>
