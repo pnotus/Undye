@@ -11,16 +11,16 @@ using Undye.Web.Models;
 namespace Undye.Web.Controllers
 {
     [RequireHttps]
-    public class HomeController : Controller
+    public class PetitionController : Controller
     {
         private ApplicationUserManager _userManager;
 
-        public HomeController()
+        public PetitionController()
         {
 
         }
 
-        public HomeController(ApplicationUserManager userManager)
+        public PetitionController(ApplicationUserManager userManager)
         {
             UserManager = userManager;
         }
@@ -39,7 +39,15 @@ namespace Undye.Web.Controllers
 
         public ActionResult Index()
         {
-            var model = new HomeViewModel { Petitions = UserManager.Users.Where(u => u.Signed).Count() };
+            var users = UserManager.Users.Where(u => u.Signed);
+            var model = new PetitionViewModel { Petitions = users.Count() };
+
+            if (User.Identity.IsAuthenticated)
+            {
+                var user = UserManager.FindById(User.Identity.GetUserId());
+                model.Signed = user.Signed;
+            }
+
             return View(model);
         }
 
@@ -55,14 +63,6 @@ namespace Undye.Web.Controllers
             ViewBag.Message = "Your contact page.";
 
             return View();
-        }
-
-        [Authorize]
-        public async Task<ActionResult> Sign()
-        {
-            var user = await UserManager.FindByIdAsync(User.Identity.GetUserId());
-            var model = new PetitionViewModel() { Signed = user.Signed };
-            return PartialView(model);
         }
 
         [HttpPost]
