@@ -1,6 +1,6 @@
 ﻿body {
     padding-top: 50px;
-    padding-bottom: 20px;
+    padding-bottom: 50px;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -23,7 +23,29 @@ textarea {
     max-width: 280px;
 }
 
-.affix,
 .affix-top {
     width: 360px;
+    top: 0;
+    position: absolute;
+}
+
+.affix {
+    width: 360px;
+    top: 50px;
+}
+
+.affix-bottom {
+    position: relative;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  height: 50px;
+  background-color: red;
+  width: 100%;
+  padding-top: 10px;
+  padding-left: 15px;
+  padding-bottom: 10px;
+  padding-right: 15px;
 }
