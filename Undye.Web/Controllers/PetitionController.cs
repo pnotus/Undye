@@ -40,27 +40,41 @@ namespace Undye.Web.Controllers
         public ActionResult Index()
         {
             var users = UserManager.Users.Where(u => u.Signed);
-            var model = new PetitionViewModel { Petitions = users.Count() };
+            var model = new IndexPetitionViewModel { Petitions = users.Count() };
+
+            return View(model);
+        }
+
+        public PartialViewResult Sign()
+        {
+            var model = new SignPetitionViewModel();
 
             if (User.Identity.IsAuthenticated)
             {
                 var user = UserManager.FindById(User.Identity.GetUserId());
                 model.Signed = user.Signed;
             }
+            else
+            {
+                model.Signed = false;
+            }
 
-            return View(model);
+            return PartialView(model);
         }
 
-        public ActionResult About()
+        public ActionResult Story()
         {
-            ViewBag.Message = "Your application description page.";
+            return View();
+        }
 
+        public ActionResult Faq()
+        {
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Your contact page";
 
             return View();
         }
@@ -68,7 +82,7 @@ namespace Undye.Web.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize]
-        public async Task<ActionResult> Sign(PetitionViewModel model)
+        public async Task<ActionResult> Sign(SignPetitionViewModel model)
         {
             if (!ModelState.IsValid)
             {

@@ -5,9 +5,8 @@ using System.Web;
 
 namespace Undye.Web.Models
 {
-    public class PetitionViewModel
+    public class SignPetitionViewModel
     {
-        public int Petitions { get; set; }
         public bool Signed { get; set; }
     }
 }

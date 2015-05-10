@@ -223,9 +223,10 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\SignPetitionViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\PetitionViewModel.cs" />
+    <Compile Include="Models\IndexPetitionViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -278,7 +279,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Petition\About.cshtml" />
     <Content Include="Views\Petition\Contact.cshtml" />
     <Content Include="Views\Petition\Index.cshtml" />
     <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
@@ -304,6 +304,9 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Petition\Faq.cshtml" />
+    <Content Include="Views\Petition\Sign.cshtml" />
+    <Content Include="Views\Petition\Story.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
