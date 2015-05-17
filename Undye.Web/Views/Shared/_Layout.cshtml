@@ -48,9 +48,10 @@
             <div class="col-md-4 hidden-sm hidden-xs">
                 @Html.Action("Sign", "Petition")
             </div>
-            <hr />
         </div>
-        <div class="visible-xs visible-sm hidden-md hidden-lg hidden-print footer"><button style="width:100%">Ta ställning du med!</button></div>
+        <div class="visible-xs visible-sm hidden-print footer">
+            @Html.ActionLink("Ta ställning du med!!", "SignMobile", "Petition", null, new { @class = "btn btn-danger btn btn-block", role = "button" })
+        </div>
     </div>
 
     @Scripts.Render("~/bundles/jquery")

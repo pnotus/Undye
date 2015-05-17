@@ -62,6 +62,11 @@ namespace Undye.Web.Controllers
             return PartialView(model);
         }
 
+        public ActionResult SignMobile()
+        {
+            return View();
+        }
+
         public ActionResult Story()
         {
             return View();

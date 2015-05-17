@@ -39,13 +39,16 @@ textarea {
 }
 
 .footer {
-  position: fixed;
-  bottom: 0;
-  height: 50px;
-  background-color: red;
-  width: 100%;
-  padding-top: 10px;
-  padding-left: 15px;
-  padding-bottom: 10px;
-  padding-right: 15px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background-color: #eee;
+    width: 100%;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-bottom: 10px;
+    padding-right: 15px;
+    border-top: thin solid #ddd;
 }
