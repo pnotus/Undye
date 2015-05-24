@@ -2,7 +2,7 @@
 
 @model Undye.Web.Models.SignPetitionViewModel
 
-<div data-spy="affix" data-offset-top="0" data-offset-bottom="0">
+<div class="panel panel-default" data-spy="affix" data-offset-top="0" data-offset-bottom="0">
     @if (Request.IsAuthenticated)
     {
         using (Html.BeginForm("Sign", "Petition"))
@@ -23,10 +23,10 @@
     }
     else
     {
-        <p>Genom att logga in får du möjlighet att själv ta ställning. Morbi venenatis mauris vitae ex ornare, vitae ornare turpis sodales. Nunc fringilla nisi sem, vitae consequat tortor condimentum ac. Maecenas finibus dui faucibus aliquet euismod. Sed hendrerit pellentesque nibh, nec vehicula odio pellentesque ac. In ultrices lorem vitae tellus tincidunt gravida quis ut elit. Cras laoreet pulvinar arcu, id interdum justo commodo ac. Sed mollis nunc ac dolor tristique bibendum. Nunc ac euismod augue, nec auctor lacus. Fusce auctor pellentesque est vitae molestie.</p>
+        <p>Genom att logga in får du möjlighet att själv ta ställning.</p>
         <section id="socialLoginForm">
             @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel())
         </section>
-        @Html.ActionLink("eller med ditt användarnam och lösenord", "Login", "Account")
+        @Html.ActionLink("eller med ditt användarnamn och lösenord", "Login", "Account")
     }
 </div>

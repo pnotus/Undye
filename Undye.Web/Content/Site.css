@@ -1,12 +1,25 @@
-﻿body {
-    padding-top: 50px;
+﻿html {
+    background: url(/lake.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+body {
+    padding-top: 80px;
     padding-bottom: 50px;
+    background: transparent;
 }
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+}
+
+.panel {
+    background-color: rgba(255, 255, 255, 0.9);
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -24,18 +37,24 @@ textarea {
 }
 
 .affix-top {
-    width: 360px;
+    width: 180px;
     top: 0;
     position: absolute;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .affix {
-    width: 360px;
+    width: 180px;
     top: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .affix-bottom {
     position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .footer {

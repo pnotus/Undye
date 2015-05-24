@@ -42,15 +42,15 @@
     </div>
     <div class="container body-content">
         <div class="row">
-            <div class="col-md-8 col-sm-12 col-xs-12">
+            <div class="col-sm-6 col-sm-offset-2 col-xs-12 panel panel-default">
                 @RenderBody()
             </div>
-            <div class="col-md-4 hidden-sm hidden-xs">
+            <div class="col-sm-2 hidden-xs">
                 @Html.Action("Sign", "Petition")
             </div>
         </div>
-        <div class="visible-xs visible-sm hidden-print footer">
-            @Html.ActionLink("Ta ställning du med!!", "SignMobile", "Petition", null, new { @class = "btn btn-danger btn btn-block", role = "button" })
+        <div class="visible-xs hidden-print footer">
+            @Html.ActionLink("Ta ställning du med!", "SignMobile", "Petition", null, new { @class = "btn btn-danger btn btn-block", role = "button" })
         </div>
     </div>
 
