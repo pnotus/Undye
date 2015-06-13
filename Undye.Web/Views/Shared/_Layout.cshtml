@@ -39,11 +39,11 @@
     </div>
     <div class="container body-content">
         <div class="row">
-            <div class="col-sm-6 col-sm-offset-2 col-xs-12 panel panel-default">
-                @RenderBody()
+            <div class="col-sm-6 col-sm-offset-1 col-xs-12">
+                <div class="col-sm-12 panel panel-default">@RenderBody()</div>
             </div>
-            <div class="col-sm-2 hidden-xs">
-                @Html.Action("Sign", "Petition")
+            <div class="col-sm-4 hidden-xs">
+                <div class="col-sm-12 panel panel-default">@Html.Action("Sign", "Petition")</div>
             </div>
         </div>
         <div class="visible-xs hidden-print footer">
