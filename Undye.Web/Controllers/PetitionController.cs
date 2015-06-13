@@ -67,7 +67,7 @@ namespace Undye.Web.Controllers
             return View();
         }
 
-        public ActionResult Story()
+        public ActionResult Facts()
         {
             return View();
         }

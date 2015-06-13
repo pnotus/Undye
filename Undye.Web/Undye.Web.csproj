@@ -307,7 +307,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Petition\Faq.cshtml" />
     <Content Include="Views\Petition\Sign.cshtml" />
-    <Content Include="Views\Petition\Story.cshtml" />
+    <Content Include="Views\Petition\Facts.cshtml" />
     <Content Include="Views\Petition\SignMobile.cshtml" />
   </ItemGroup>
   <ItemGroup>
